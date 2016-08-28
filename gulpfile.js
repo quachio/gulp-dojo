@@ -58,12 +58,6 @@ gulp.task('css', function() {
 
 gulp.task('scripts', function() {
     gulp.src(['app/js/**/*.js', '!app/js/**/*.min.js'])
-        .pipe(plumber())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js'))
         .pipe(reload({
             stream: true
         }));
