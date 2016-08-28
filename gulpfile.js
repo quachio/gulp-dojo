@@ -23,6 +23,7 @@ gulp.task('browser-sync', function() {
     browserSync({
         server: {
             baseDir: "./app/",
+            // directory: true,
         },
         browser: ["google chrome", "safari"],
     });
